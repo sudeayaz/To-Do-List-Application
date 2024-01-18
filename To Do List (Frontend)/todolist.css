@@ -1,0 +1,405 @@
+*{
+  padding: 0;
+  margin: 0;
+} /* reset */
+
+
+
+.newList{
+   display: flex; /* flexbox */
+   flex-direction: row; /* yatayda sıralama */
+   justify-content: center; /* yatayda ortala */
+}
+
+#new-list-input{
+  margin-top: 30px;
+  height: 30px;
+  width: 300px; /* inputun genişliği */
+  border: 2px solid black;
+}
+
+
+
+
+/* The Modal (background) */
+
+.modal {
+  display: none; 
+  /* Hidden by default */
+
+  position: fixed; 
+  /* Stay in place */
+
+  z-index: 1;
+  /* Sit on top */
+
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+
+  overflow: auto;
+  /* Enable scroll if needed */
+
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content Box */
+.modal-content {
+  border-radius: 10px;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 500px; /* Could be more or less, depending on screen size */
+  height: 250px;
+}
+
+
+
+ /* Modal content button css */
+ .btn{
+  display: flex;
+  flex-direction: row; 
+  justify-content: flex-end; 
+  margin-top: 50px;
+  padding: 0 20px; 
+  margin-right: 40px;
+
+
+ }
+
+ .create{
+  font-size: 24px;
+  border-radius: 5px; 
+  margin-right: 15px;
+  width: 100px;
+  height: 35px;
+  border: 0.5px solid black;
+  background-color: white;
+
+ }
+
+
+ .cancel{
+
+  font-size: 24px;
+  border-radius: 5px; 
+  margin-right: 15px;
+  width: 100px;
+  height: 35px;
+  border: 0.5px solid black;
+  background-color: white;
+
+ }
+
+
+
+
+
+
+
+#tasks-list {
+  list-style: none;/* listeyi noktalı yapmaz (bullet pointleri kaldırır) */
+  margin-top:60px ;
+}
+
+
+span.through {
+  text-decoration: line-through; /*yazının üstünü çizer */
+}
+
+#tasks-list li 
+{
+  
+  background: white;
+  border-radius: 5px;
+  color: black;
+  padding: 20px;
+}
+
+li+li /* ilk li hariç diğer li leri seçer */
+{
+  margin-top: 10px;
+}
+
+
+
+
+/* List container */
+
+.lists-container {
+  display: flex; 
+  flex-direction: row;
+  height: 100%;
+}
+
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.left-panel {
+  width: 35%;
+  display: flex;
+  flex-direction: column; /* dikeyde sıralama */
+  height: 100%;
+  padding: 4px 0px;
+}
+
+#new-list-button {
+  margin-top: auto;/* en alta yapıştırır */
+  display: flex;
+  justify-content: flex-start;/* sola yaslar */
+  align-items: center;/* dikeyde ortalar */
+  width: 100%;
+  height: 60px;
+  background-color: #efefef;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+
+}
+
+
+::placeholder
+{
+  font-size: 20px;
+}
+
+
+input[type="text"] /* inputun içindeki yazıyı seçer */
+{
+  font-size: 20px; 
+}
+
+
+.plus{
+  color: #888;
+  font-size: 40px;
+  margin-left: 40px;
+  margin-right: 20px;
+
+}
+
+
+.right-panel {
+  width: 65%;
+  background: rgb(117, 137, 211);
+  position: relative;
+  padding: 15px;
+}
+
+.last {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.last input[type=text] 
+{
+  width: 80%;
+}
+
+.list-item {
+  position: relative;/* list itemin içindeki kareyi konumlandırmak için */
+  display: flex;
+  flex-direction: row;
+}
+
+.list-item .kare{
+  
+  background-color: #8da2f8;
+  width: 4px;
+  height: 20px;
+  display: flex;
+  margin-top: 5px;
+  
+  
+}
+
+.list-item .kare:hover/* kareye mouse geldiğinde */
+{
+  background-color: #8da2f8;
+  width: 4px;
+  height: 20px;
+  display: flex;
+  margin-top: 5px;
+  
+  
+}
+ /* text kısmı  */
+
+
+  
+
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus /* mouse üzerine gelince */
+{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.modal-title {
+  border-radius: 10px;
+  padding: 10px 15px;
+  background: #E0E0E0;
+}
+
+#add-task-button {
+  position: absolute;
+  border: none;
+  left: 0px;
+  height: 45px;
+
+
+}
+
+#add-task-input {
+  padding-left: 40px;
+  height: 40px;
+}
+
+#left-list {
+  list-style: none;
+  padding-left: 0;
+  color: black;
+}
+
+
+
+
+/* SAĞ İLK KISIM MEMBERS GÖZÜKEN TARAF */
+
+
+.projectmembers {
+  display: flex;
+  align-items: center;
+  font-size: 44px;
+  color: rgb(179, 81, 103);
+  font-weight: bold;
+}
+
+#star2 {
+  font-size: 50px;
+  padding: 10px 30px;
+  border: 8px;
+  color: rgb(179, 81, 103);
+}
+
+#students {
+  margin-left: 35px;
+  margin-top: 40px;
+  font-size: 19px;
+  padding-left: 30px;
+}
+
+.person {
+  display: flex;
+}
+
+.person div {
+  padding-left: 20px;
+  padding-top: 15px;
+}
+
+.person div p {
+  margin: 3px;
+}
+
+.person img {
+  object-fit: cover;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  border-radius: 60px;
+  border: 0.5px solid black;
+  margin: 10px;
+}
+
+.person span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.firstPerson{
+  display: flex; 
+  width: 100%;
+  padding-right: 30px;
+}
+
+.personfirst{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+#left-list li {
+  font-size: 24px;
+  color: rgb(98, 90, 99);
+  padding: 8px 16px;
+  font-weight: bold;
+}
+
+hr {
+  margin: 8px 0;
+}
+
+.right-panel:has(.projectmembers) /* sağ panelde projectmembers varsa */
+ {
+    background: rgb(254, 231, 235) !important; /* !important ile öncelik verilir */
+ }
+
+#left-list li:hover {
+
+  
+  .trash-button  
+  {
+      visibility: visible;
+  }
+  cursor: pointer ; /* mouse üzerine gelince el işareti çıkar */
+}
+
+.trash-button{
+  visibility: hidden; 
+  font-size: 24px; width: 50px; position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+
+
+#menu-icon{font-size: 20px; color: #8da2f8; padding-left: 5px; padding-right: 10px;}
+
+/* .trash-button {
+  font-size: 18px;
+  background: transparent;
+  border-width: 0;
+} */
+
+.list-actions {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+}
